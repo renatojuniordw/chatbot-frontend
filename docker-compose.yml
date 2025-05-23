@@ -1,0 +1,16 @@
+services:
+  frontend_dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dj_yuri-chatbot-frontend-dev
+    ports:
+      - "3010:3000"
+    env_file:
+      - ./.env
+    environment:
+      - NODE_OPTIONS=--openssl-legacy-provider
+    volumes:
+      - .:/app
+    command: ["sh", "-c", "npm install && npm run build && node server.js"]
+    restart: unless-stopped
