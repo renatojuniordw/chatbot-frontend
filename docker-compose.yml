@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: dj_yuri-chatbot-frontend-dev
+    container_name: chatzap-frontend
     ports:
       - "3010:3000"
     env_file:
