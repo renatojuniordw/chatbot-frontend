@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: chatzap-frontend
     ports:
-      - "3010:3000"
+      - "3010:3010"
     env_file:
       - ./.env
     environment:
